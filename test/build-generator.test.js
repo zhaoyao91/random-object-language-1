@@ -154,4 +154,37 @@ describe('buildGenerator', () => {
       f3: 222
     }))).toBe(false)
   })
+
+  it('should generate an obj without virtual fields', async () => {
+    const fo = {
+      f1: {
+        '@type': 'enum',
+        values: [1, 2],
+        virtual: true
+      },
+      f2: {
+        '@type': 'dependant',
+        dependsOn: ['f1'],
+        map: [
+          [1, {'@type': 'assigned', value: 11}],
+          [2, {'@type': 'assigned', value: 22}],
+        ]
+      }
+    }
+    const generate = buildGenerator(fo)
+    const obj = await generate()
+    expect(
+      isEqual(obj, {f2: 11}) ||
+      isEqual(obj, {f2: 22})
+    ).toBe(true)
+  })
+
+  it('should use type@ as type field', async () => {
+    const fo = {
+      f1: {'type@': 'assigned', value: 1}
+    }
+    const generate = buildGenerator(fo, {typeField: 'type@'})
+    const obj = await generate()
+    expect(obj).toEqual({f1: 1})
+  })
 })
