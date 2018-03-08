@@ -1,5 +1,5 @@
 const buildGenerator = require('../lib/build-generator')
-const isEqual = require('lodash.isequal')
+const isEqual = require('fast-deep-equal')
 
 describe('buildGenerator', () => {
   it('should build a void field', async () => {

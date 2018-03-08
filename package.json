@@ -4,18 +4,20 @@
   "description": "js implementation of random-object-language.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "benchmark": "node benchmark"
   },
   "author": "zhaoyao91 <zhaoyao91@163.com>",
   "license": "MIT",
   "dependencies": {
     "dot-prop": "^4.2.0",
-    "lodash.isequal": "^4.5.0",
+    "fast-deep-equal": "^1.1.0",
     "lodash.random": "^3.2.0",
     "toposort": "^1.0.6",
     "weighted": "^0.3.0"
   },
   "devDependencies": {
-    "jest": "^22.4.2"
+    "jest": "^22.4.2",
+    "measure-function-time": "^1.0.0"
   }
 }
