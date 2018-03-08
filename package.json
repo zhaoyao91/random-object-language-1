@@ -1,21 +1,21 @@
 {
   "name": "random-object-language",
-  "version": "1.1.1",
-  "description": "",
+  "version": "2.0.0",
+  "description": "js implementation of random-object-language.",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "zhaoyao91 <zhaoyao91@163.com>",
+  "license": "MIT",
   "dependencies": {
-    "es6-error": "^4.1.1",
-    "lodash": "^4.17.5"
+    "dot-prop": "^4.2.0",
+    "lodash.isequal": "^4.5.0",
+    "lodash.random": "^3.2.0",
+    "toposort": "^1.0.6",
+    "weighted": "^0.3.0"
   },
   "devDependencies": {
-    "jest": "^22.2.2"
+    "jest": "^22.4.2"
   }
 }
