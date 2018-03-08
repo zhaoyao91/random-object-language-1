@@ -1,9 +1,1 @@
-
-
-function buildGenerator (FO) {
-
-  return function generator () {
-
-  }
-}
-
+module.exports = require('./lib/build-generator')
