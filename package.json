@@ -1,6 +1,6 @@
 {
   "name": "random-object-language",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "js implementation of random-object-language.",
   "main": "index.js",
   "scripts": {
